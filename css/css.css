@@ -3,6 +3,7 @@ body{
     /*padding: 0;*/
     font-family: "Arial", "sans-serif";
     background-color: #e1f0f8;
+    color: #4b4b4b;
 }
 .page-head{
     position: relative;
@@ -47,8 +48,9 @@ body{
 }
 .head-menu{
     position: absolute;
+    padding: 0;
     top: 172px;
-    left: -40px;
+    left: 0px;
     list-style: none;
     font-size: 0;
 }
@@ -86,4 +88,205 @@ body{
 .head-menu a:hover{
     background-color: #7bc3d5;
     color: #ffffff;
+}
+.header{
+    width: 1146px;
+    margin: 0 auto;
+}
+.header h1{
+    margin: 0;
+    margin-top: 40px;
+    font-size: 64px;
+    font-weight: normal;
+}
+.header p{
+    margin:0;
+    font-size: 26px;
+}
+.main-content{
+    margin: 35px auto;
+    width: 1146px;
+}
+.recommendation{
+    display: block;
+    background-color: #ffffff;
+    width: 240px;
+    height: 470px;
+    float: left;
+    border-radius: 5px;
+}
+.recommendation p{
+    margin-top: 23px;
+    margin-left: 23px;
+    font-size: 20px;
+
+}
+.recommendation ul{
+    padding: 0;
+}
+.recommendation li{
+    list-style: none;
+    margin-top: 15px;
+    margin-left: 26px;
+}
+.recommendation li:nth-child(2){
+    margin-top: 16px;
+}
+.recommendation li:nth-child(3), .recommendation li:nth-child(5), .recommendation li:last-child{
+    margin-top: 17px;
+}
+.recommendation li:nth-child(6), .recommendation li:nth-child(9){
+    margin-top: 18px;
+}
+.recommendation a{
+    text-decoration: none;
+    color: #8a8a8a;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #8a8a8a;
+    cursor: pointer;
+}
+.recommendation a:hover{
+    color: #eb5825;
+    border-color: #eb5825;
+}
+.creating-window{
+    display: block;
+    background-color: #ffffff;
+    margin-left: 26px;
+    width: 877px;
+    min-height: 611px;
+    float: right;
+    border-radius: 5px;
+}
+.creating-window h2{
+    margin-top: 27px;
+    margin-left: 26px;
+    margin-bottom: 0;
+    font-size: 26px;
+    font-weight: normal;
+}
+.first-block{
+    float: left;
+    margin-top: 31px;
+    margin-left: 81px;
+
+}
+.first-block p{
+    margin-top: 35px;
+    margin-left: 40px;
+    font-size: 18px;
+    color: #adadad;
+}
+.second-block{
+    float: left;
+}
+.second-block ul:first-child{
+    margin-top: 30px;
+    margin-left: 80px;
+}
+.second-block ul:first-child li{
+    color: #ec6434;
+    margin-top: 10px;
+}
+.second-block ul:first-child p{
+    margin: 0;
+    color: #484848;
+    font-size: 14px;
+}
+.second-block h2{
+    margin-top: 35px;
+    margin-left: 101px;
+    font-size: 20px;
+    font-weight: normal;
+}
+.select{
+    margin-top: 22px;
+    margin-left: 60px;
+    font-size: 0;
+}
+.select li{
+    display: inline-block;
+    position: relative;
+    height: 59px;
+    width: 60px;
+    margin-right: 9px;
+    cursor: pointer;
+}
+.select li:first-child{
+    background-image:url("../png/example.jpg");
+    background-position: 0 0;
+}
+.select li:nth-child(2){
+    background-image:url("../png/example.jpg");
+    background-position: -69px 0;
+}
+.select li:nth-child(3){
+    background-image:url("../png/example.jpg");
+    background-position: -138px 0;
+}
+.select li:nth-child(4){
+    background-image:url("../png/example.jpg");
+    background-position: -207px 0;
+}
+.select li:nth-child(5){
+    background-image:url("../png/example.jpg");
+    background-position: -276px 0;
+}
+.select li:nth-child(6){
+    background-image:url("../png/example.jpg");
+    background-position: -345px 0;
+}
+.select li:last-child{
+    background-image:url("../png/example.jpg");
+    background-position: -414px 0;
+}
+.check::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    height: 40px;
+    width: 40px;
+    background-image: url("../png/check.svg");
+    background-position: -3px -5px;
+}
+.description{
+    margin-top: 25px;
+    margin-left: 99px;
+    width: 350px;
+    font-size: 14px;
+}
+button{
+    background: #eb5825;
+    color: #ffffff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 10px 41px;
+    margin-top: 31px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.second-block a{
+    text-decoration: none;
+    margin-left: 100px;
+    color: #8a8a8a;
+    border-bottom: 2px solid #cacaca;
+}
+.second-block a:hover{
+    color: #eb5825;
+    border-color: #eb5825;
+}
+.advice{
+    display: block;
+    background: #ffffff;
+    border-radius: 5px;
+    float: right;
+    width: 877px;
+    min-height: 481px;
+    margin-top: 25px;
 }
