@@ -1,58 +1,46 @@
-"use strict"
-var allWindows = document.querySelectorAll('.select li');
-var windowOne = document.querySelector('.select li:first-child');
-var windowTwo = document.querySelector('.select li:nth-child(2)');
-var windowThree = document.querySelector('.select li:nth-child(3)');
-var windowFour = document.querySelector('.select li:nth-child(4)');
-var windowFive = document.querySelector('.select li:nth-child(5)');
-var windowSix = document.querySelector('.select li:nth-child(6)');
-var windowSeven = document.querySelector('.select li:last-child');
-var windowExample = document.querySelector('.first-block img');
-var exampleName = document.querySelector('.first-block p')
-var removeClassCheck = function (array) {
-    for (var i = 0; i < array.length; i++){
-        array[i].classList.remove('check');
-    }
-};
-windowOne.addEventListener('click', function () {
-    removeClassCheck(allWindows);
-    windowOne.classList.add('check');
-    windowExample.src = 'png/example_1.jpg';
-    exampleName.textContent = 'Ирландский дуб';
-});
-windowTwo.addEventListener('click', function () {
-    removeClassCheck(allWindows);
-    windowTwo.classList.add('check');
-    windowExample.src = 'png/example_2.png';
-    exampleName.textContent = 'Вишня';
-});
-windowThree.addEventListener('click', function () {
-    removeClassCheck(allWindows);
-    windowThree.classList.add('check');
-    windowExample.src = 'png/example_3.png';
-    exampleName.textContent = 'Макоре';
-});
-windowFour.addEventListener('click', function () {
-    removeClassCheck(allWindows);
-    windowFour.classList.add('check');
-    windowExample.src = 'png/example_4.png';
-    exampleName.textContent = 'Липа';
-});
-windowFive.addEventListener('click', function () {
-    removeClassCheck(allWindows);
-    windowFive.classList.add('check');
-    windowExample.src = 'png/example_5.png';
-    exampleName.textContent = 'Амарант';
-});
-windowSix.addEventListener('click', function () {
-    removeClassCheck(allWindows);
-    windowSix.classList.add('check');
-    windowExample.src = 'png/example_6.png';
-    exampleName.textContent = 'Берлиния';
-});
-windowSeven.addEventListener('click', function () {
-    removeClassCheck(allWindows);
-    windowSeven.classList.add('check');
-    windowExample.src = 'png/example_7.png';
-    exampleName.textContent = 'Габон';
-});
+// "чистый" js
+// "use strict"
+// var containerWindow = document.querySelector('.select');
+// var listWindows = document.querySelectorAll('.select li');
+// var listWindowName = ["Ирландский дуб","Вишня","Макоре","Липа","Амарант","Берлиния","Габон"];
+// var windowExample = document.querySelector('.first-block img');
+// var exampleName = document.querySelector('.first-block p');
+// var removeClassCheck = function (array) {
+//     for (var i = 0; i < array.length; i++){
+//         array[i].classList.remove('check');
+//     }
+// };
+//
+// containerWindow.addEventListener('click', function(event){
+//     var target = event.target;
+//     if(target.tagName != "LI"){
+//         return; }
+//     else {
+//         var numberWindow = target.id;
+//         removeClassCheck(listWindows);
+//         listWindows[numberWindow - 1].classList.add('check');
+//         exampleName.textContent = listWindowName[numberWindow - 1];
+//         if (numberWindow == 1){
+//             windowExample.src = "png/example_"+numberWindow+".jpg";
+//         } else {
+//             windowExample.src = "png/example_"+numberWindow+".png";
+//         }
+//     }
+// });
+
+
+// jQuery
+var listWindowName = ["Ирландский дуб","Вишня","Макоре","Липа","Амарант","Берлиния","Габон"];
+$(document).ready(
+    $('.select>li').click(function (event) {
+        $('.select>li').removeClass('check');
+        $(this).addClass('check');
+        $(".first-block>p").html(listWindowName[event.target.id - 1]);
+        if(event.target.id == 1){
+            $('.first-block>img').attr("src","png/example_"+event.target.id+".jpg");
+        } else {
+            $('.first-block>img').attr("src","png/example_"+event.target.id+".png");
+        }
+
+    })
+);
